@@ -33,7 +33,11 @@ export default function App() {
           tabBarInactiveTintColor: "gray"
         })}>
         <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Events" component={EventsScreen} />
+        <Tab.Screen
+          name="Events"
+          options={{ headerShown: false }}
+          component={EventsScreen}
+        />
         <Tab.Screen name="Settings" component={SettingsScreen} />
       </Tab.Navigator>
     </NavigationContainer>
