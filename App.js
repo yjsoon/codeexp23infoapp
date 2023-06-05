@@ -2,7 +2,7 @@ import * as React from "react";
 import { Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import HomeScreen from "./components/HomeScreen";
+import HomeScreen from "./components/HomeScreen.js";
 import SettingsScreen from "./components/SettingsScreen";
 import EventsScreen from "./components/EventsScreen";
 import { FontAwesome } from "@expo/vector-icons";
@@ -23,7 +23,7 @@ export default function App() {
             } else if (route.name === "Events") {
               iconName = "list";
             } else if (route.name === "Settings") {
-              iconName = "gear";
+              iconName = focused ? "user" : "user-o";
             }
 
             // You can return any component that you like here!
